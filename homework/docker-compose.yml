@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  memc-loader:
+    build: ..
+    volumes:
+      - /path/to/local/files:/data
+    command: python memc_load.py --pattern=/data/*.tsv.gz --dry
